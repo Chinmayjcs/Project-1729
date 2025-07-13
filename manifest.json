@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "LeetCode Helper with Gemini",
+  "version": "1.0",
+  "description": "Get hints and solutions using Gemini for LeetCode problems.",
+  "permissions": ["activeTab", "scripting","storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://leetcode.com/problems/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+ 
+
+}

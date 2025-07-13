@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kuwajima Sensei!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="width: 500px; height: 600px;">
+  <div class="container">
+    <h2>Kuwajima Sensei!</h2>
+    
+    <label>Leetcode problem:</label>
+    <input type="text" id="problemInput" placeholder="eg. 1,2,3..." />
+
+    <label>Prog language:</label>
+    <select id="languageSelect">
+      <option value="Python">Python</option>
+      <option value="C++">C++</option>
+      <option value="JavaScript">JavaScript</option>
+      <option value="Java">Java</option>
+    </select>
+
+    <label>Service:</label>
+    <button id="btnIntuition">Intuition & Approach</button>
+    <button id="btnOptimal">Optimal Solution Only</button>
+
+    <div id="responseBox"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
