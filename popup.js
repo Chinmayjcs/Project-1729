@@ -38,7 +38,7 @@ Explain your algorithm briefly and provide clean, well-commented code.
 async function getGeminiResponse(prompt) {
   console.log("Prompt:", prompt);
 
-  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpnDPoW20eQSDv0CMDXz0xaEABg07lU10", {
+  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_KEY_HERE", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
