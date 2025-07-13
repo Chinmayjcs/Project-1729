@@ -1,27 +1,76 @@
 body {
-  background: url('back_ground.png') center center / cover no-repeat;
-  color: #f0f0f0;
-  font-family: Arial, sans-serif;
+  background-color: #141414; /* LeetCode dark background */
+  color: #E0E0E0;            /* Light text */
+  font-family: 'Segoe UI', sans-serif;
   width: 500px;
   height: 600px;
   padding: 20px;
   margin: 0;
   overflow-y: auto;
-
-  /* For glass effect to work properly */
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
 }
-#responseBox {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px) saturate(160%);
-  -webkit-backdrop-filter: blur(12px) saturate(160%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input, select {
+  background-color: #1F1F1F;
   color: #ffffff;
+  border: 1px solid #333;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+button {
+  background-color: #FFA116; /* LeetCode orange */
+  color: #141414;            /* Dark text on orange */
+  font-weight: 600;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #e59300;
+}
+
+#responseBox {
+  background: #1E1E1E;
+  color: #ffffff;
+  padding: 15px;
+  border: 1px solid #333;
   white-space: pre-wrap;
   max-height: 300px;
   overflow-y: auto;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.popup-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 2px solid #FFA116; 
+}
+
