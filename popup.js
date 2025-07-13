@@ -14,20 +14,34 @@ async function handleRequest(type) {
 
   if (type === "intuition") {
     prompt = `
-Explain how to solve the LeetCode problem titled "${problemTitle}".
+Explain how to solve the LeetCode problem number "${problemTitle}".
 
-Start with a brute-force solution and explain its weaknesses.
+Start with what is given in the question explain the topics the solution will require(like stack,queue,slidding window,dynamic programming etc)
 
-Then describe how to move to an optimal approach.
+Then provide Brute-force solution which solves the problem but not in the optimal way 
+and generate the brute force code in ${language} with proper indentation and simple and understandable variable names.
 
-Explain the intuition clearly.
+Then explain the drawbacks of the brute force solution.
 
-Finally, give clean code in ${language}.
+Then explain the approch and intuition (clearly) of the optimal solution and how it solves the isuues faced by the brute force solution.
+
+At the end explain the workflow of the programm along with its time complexity and space complexity 
+also produce a workflow diagram to understand the problem in a better in a simple manner
+
+Also if any edge case exits then explain how the soolution is dealing with the edge case and 
+suggest simillar leetcode question number that is very is simillar to the current one
+
+
+
+Finally, give clean opyimal code in ${language} with proper indentation and simple-understandable variable names.
     `.trim();
   } else {
     prompt = `
-Give an optimal solution in ${language} for the LeetCode problem titled "${problemTitle}".
-Explain your algorithm briefly and provide clean, well-commented code.
+          Give an optimal solution in ${language} for the LeetCode problem number "${problemTitle}" with proper indentation and simple-understandable variable names .
+          Explain your algorithm briefly.
+          the time complexity and space complexity.
+          suggest the simillar leetcode question number.
+          at the end mentioned the topics covered in the problem (like array,queue,slidding window,tree,graph etc..)
     `.trim();
   }
 
@@ -38,7 +52,7 @@ Explain your algorithm briefly and provide clean, well-commented code.
 async function getGeminiResponse(prompt) {
   console.log("Prompt:", prompt);
 
-  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_KEY_HERE", {
+  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpnDPoW20eQSDv0CMDXz0xaEABg07lU10", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
