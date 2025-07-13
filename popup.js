@@ -52,7 +52,7 @@ Finally, give clean opyimal code in ${language} with proper indentation and simp
 async function getGeminiResponse(prompt) {
   console.log("Prompt:", prompt);
 
-  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCpnDPoW20eQSDv0CMDXz0xaEABg07lU10", {
+  const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=ENTER_YOUR_API_KEY_HERE", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
