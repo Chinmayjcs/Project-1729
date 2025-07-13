@@ -19,10 +19,10 @@ along with the workflow and time complexity
 3.Then choose load unpacked select the project folder(containing all the files)<br>
 
 
-## NOTE:
-    before following all these steps make sure to update your API key at file `popup.js`<br>
-    this project uses gemini 1.5 model as it available at free tier <br>
-    try with other model or other service provider do explore the options <br>
+## additiontional info
+    before following all these steps make sure to update your API key at file `popup.js`
+    this project uses gemini 1.5 model as it available at free tier 
+    try with other model or other service provider do explore the options 
 
 ## 📸 Screenshot
 
