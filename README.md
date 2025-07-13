@@ -1,4 +1,4 @@
-##LeetCode Assistant-Jigoro Kuwajima
+# LeetCode Assistant-Jigoro Kuwajima
 
 A brower extension to help you understand the leetcode questions and provides both brute force and optimal solutions to the question 
 along with the workflow and time complexity 
